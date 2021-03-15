@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CMSC 447 Individual Assignment</title>
+</head>
+<body>
+    <form action = "/view_data/">
+        <label for="view_data_submit">Click to view the table of students in the database:</label>
+        <input type="submit" value="View Data" id="view_data_submit">
+    </form>
+    <br>
+
+    Modify the entry for a given student ID in the database:
+    <form action="/update_data/" method="post">
+        <label for = "update_data_id">Student ID:</label>
+        <input type="text" id="update_data_id" name="id">
+        <br>
+        <label for = "update_data_name">New Student Name:</label>
+        <input type="text" id="update_data_name" name="name">
+        <br>
+        <label for = "update_data_marks">New Student Marks:</label>
+        <input type="text" id="update_data_marks" name="marks">
+        <br>
+        <input type="submit" value="Update Entry">
+    </form>
+    <br>
+
+    Add a new entry to the database:
+    <form action="/add_data/" method="post">
+        <label for = "add_data_id">New Student ID:</label>
+        <input type="text" id="add_data_id" name="id">
+        <br>
+        <label for = "add_data_name">New Student Name:</label>
+        <input type="text" id="add_data_name" name="name">
+        <br>
+        <label for = "add_data_marks">New Student Marks:</label>
+        <input type="text" id="add_data_marks" name="marks">
+        <br>
+        <input type="submit" value="Add Entry">
+    </form>
+    <br>
+
+    Delete an entry from the database:
+    <form action="/delete_data/" method="post">
+        <label for = "delete_data_id">Student ID:</label>
+        <input type="text" id="delete_data_id" name="id">
+        <br>
+        <input type="submit" value="Delete Entry">
+    </form>
+</body>
+</html>

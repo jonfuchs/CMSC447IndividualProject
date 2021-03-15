@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Data</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 5px
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            {% for column in column_names %}
+            <th>{{ column[0] }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in row_list %}
+        <tr>
+            {% for entry in row %}
+            <td>{{ entry }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="../">Back To Home Page</a>
+</body>
+</html>

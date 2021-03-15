@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% if status == 'success' %}
+        Database Operation Successful
+        {% else %}
+        Database Error
+        {% endif %}
+    </title>
+</head>
+<body>
+    {% if status == 'success' %}
+    The database operation requested was successful.
+    {% elif status == 'id_not_found' %}
+    Error: the requested database operation could not be performed because no entry matched the inputted ID.
+    {% elif status == 'id_exists' %}
+    Error: the requested database operation could not be performed because an entry with the inputted ID already exists.
+    {% else %}
+    Unknown Error
+    {% endif %}
+    <br>
+    <a href="../">Back To Home Page</a>
+</body>
+</html>
